@@ -1,3 +1,5 @@
+# we will define a Custom Health Check in argocd-cm ConfigMap:
+
 data:
   resource.customization.health.ConfigMap: |
     hs = {}
