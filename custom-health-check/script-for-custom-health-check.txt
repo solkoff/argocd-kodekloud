@@ -2,7 +2,7 @@ data:
   resource.customization.health.ConfigMap: |
     hs = {}
     hs.status = "Healthy"
-      if obj.data.CUSTOM_HEADER == "Customized" then
+      if obj.data.FONT_COLOR == "#FFFFFF" then
         hs.status = "Degrated"
         hs.message = "Use different Header"
       end
