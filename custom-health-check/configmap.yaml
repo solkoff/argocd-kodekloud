@@ -4,5 +4,5 @@ metadata:
   name: myconfigmapv
 data:
   BG_COLOR: '#12181b'
-  FONT_COLOR: '#27AE60'
-  CUSTOM_HEADER: 'Customized with a configmap!'
+  FONT_COLOR: '#FFFFFF'
+  CUSTOM_HEADER: 'Customized'
