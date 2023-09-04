@@ -1,1 +1,2 @@
-NumOfReplicas: 1
+deploy:
+  NumOfReplicas: 1
