@@ -2,8 +2,8 @@ data:
   resource.customization.health.ConfigMap: |
     hs = {}
     hs.status = "Healthy"
-      if obj.data.type == "Ready" and condition.status == "True" then
-        hs.status = "Healthy"
-        hs.message = condition.message
-        return hs
-        end
+      if obj.data.CUSTOM_HEADER == "Customized" then
+        hs.status = "Degrated"
+        hs.message = "Use different Header"
+      end
+    return hs
