@@ -1,0 +1,5 @@
+deploy:
+  NumOfReplicas: 2
+  #DockerRepo: richarDcheSterwood
+
+environment: prod
