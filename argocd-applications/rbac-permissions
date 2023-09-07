@@ -1,0 +1,8 @@
+data:
+  policy.default: role:readonly
+  policy.csv: |
+    p, role:devops, applications, *, */*, allow
+    p, role:readexecute, applications, get, default/guestbook, allow
+    p, role:readexecute, applications, sync, default/guestbook, allow
+    g, sergei, role:devops
+    g, anna, role:readexecute

@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: health-check
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/solkoff/argocd-kodekloud.git
+    targetRevision: HEAD
+    path: ./custom-health-check/
+  destination:
+    server: https://kubernetes.default.svc # has be to IP
+    namespace: health
+  
+  syncPolicy:
+    automated:
+      prune: true # resources deleted in Git will be deleted in the cluster
+      selfHeal: true # overwrite manual changes 
+    syncOptions:
+    - CreateNamespace=true

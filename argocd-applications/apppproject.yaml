@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: custom-project
+  namespace: argocd
+spec:
+  description: Example Project
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: guestbook
+    server: https://32.32.32.32
+    name: gke_k8s-project2-371200_us-east1-c_argocd
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+
